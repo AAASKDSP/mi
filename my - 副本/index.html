@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人作品集</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        base: '#0c0e16',
+        muted: '#a8a9b8',
+        accent: '#9d88e8',
+      },
+      fontFamily: {
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style type="text/tailwindcss">
+@layer utilities {
+  .bg-gradient-soft {
+    background: radial-gradient(circle at 20% 10%, rgba(157,136,232,0.12), transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(100,120,200,0.08), transparent 40%),
+                #0c0e16;
+  }
+  .text-fade {
+    background: linear-gradient(90deg, #e6e6f0, #9d88e8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .line {
+    width: 48px;
+    height: 1px;
+    background: rgba(157,136,232,0.45);
+  }
+  .card-soft {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+  }
+  .hover-lift {
+    transition: all 0.35s cubic-bezier(0.2,0,0.2,1);
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    border-color: rgba(157,136,232,0.25);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+.dot {
+  position: fixed;
+  border-radius: 999px;
+  background: rgba(157,136,232,0.22);
+  pointer-events: none;
+}
+</style>
+</head>
+<body class="bg-base bg-gradient-soft text-slate-100 font-inter antialiased">
+<div class="dot w-1 h-1 top-[12%] left-[18%] opacity-60"></div>
+<div class="dot w-0.5 h-0.5 top-[45%] left-[75%] opacity-40"></div>
+<div class="dot w-1 h-1 top-[78%] left-[12%] opacity-30"></div>
+<div class="dot w-0.5 h-0.5 top-[22%] left-[85%] opacity-50"></div>
+<div class="dot w-1 h-1 top-[62%] left-[40%] opacity-35"></div>
+
+<nav class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-6 flex justify-between items-center">
+  <div class="text-sm tracking-[0.22em] text-muted">PORTFOLIO</div>
+  <div class="flex gap-8 text-xs tracking-[0.14em] text-muted">
+    <a href="#home" class="hover:text-accent transition-colors">首页</a>
+    <a href="#about" class="hover:text-accent transition-colors">关于</a>
+    <a href="#works" class="hover:text-accent transition-colors">作品</a>
+    <a href="#contact" class="hover:text-accent transition-colors">联系</a>
+  </div>
+</nav>
+
+<section id="home" class="min-h-screen flex items-center justify-center px-6 md:px-12">
+  <div class="max-w-2xl">
+    <div class="line mb-8"></div>
+    <h1 class="text-[clamp(2.4rem,6vw,4.2rem)] font-light leading-[1.15] text-fade">
+      影像叙事<br>静而有力量
+    </h1>
+    <p class="mt-8 text-muted text-base md:text-lg font-light max-w-xl leading-relaxed">
+      专注视频创作、影像记录与个人IP内容打磨。
+      克制表达，留存质感。
+    </p>
+    <div class="mt-10">
+      <a href="#works" class="inline-block px-6 py-3 border border-accent/30 text-accent text-sm tracking-widest hover:bg-accent/10 transition-all">
+        浏览作品
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="min-h-screen flex items-center px-6 md:px-12 py-24">
+  <div class="max-w-3xl mx-auto">
+    <div class="line mb-8"></div>
+    <h2 class="text-3xl md:text-4xl font-light mb-10">关于我</h2>
+    <div class="grid md:grid-cols-2 gap-10 text-muted font-light leading-relaxed">
+      <div>
+        <p>习惯用镜头捕捉情绪，在剪辑里梳理叙事节奏。不追逐喧闹的流量套路，偏爱干净、有留白的视觉语言。</p>
+      </div>
+      <div>
+        <p>擅长短视频IP策划、实拍剪辑、画面调色。持续打磨审美，相信简约，才是最高级的表达。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="px-6 md:px-12 py-24">
+  <div class="max-w-5xl mx-auto">
+    <div class="line mb-8"></div>
+    <h2 class="text-3xl md:text-4xl font-light mb-14">作品</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- 点击跳转到分类详情页 -->
+      <a href="category-01.html" class="card-soft hover-lift p-8 rounded-xl">
+        <div class="text-xs text-accent tracking-widest mb-3">IP账号</div>
+        <h3 class="text-xl font-normal mb-3">VLOG短片</h3>
+        <p class="text-muted text-sm font-light">点击进入查看本组全部视频作品</p>
+      </a>
+
+      <a href="category-02.html" class="card-soft hover-lift p-8 rounded-xl">
+        <div class="text-xs text-accent tracking-widest mb-3">纪实影像</div>
+        <h3 class="text-xl font-normal mb-3">访谈纪实</h3>
+        <p class="text-muted text-sm font-light">点击进入查看本组全部视频作品</p>
+      </a>
+
+      <a href="category-03.html" class="card-soft hover-lift p-8 rounded-xl">
+        <div class="text-xs text-accent tracking-widest mb-3">商业视觉</div>
+        <h3 class="text-xl font-normal mb-3">品牌视觉短片</h3>
+        <p class="text-muted text-sm font-light">点击进入查看本组全部视频作品</p>
+      </a>
+
+      <a href="category-04.html" class="card-soft hover-lift p-8 rounded-xl">
+        <div class="text-xs text-accent tracking-widest mb-3">AI应用</div>
+        <h3 class="text-xl font-normal mb-3">AI视觉</h3>
+        <p class="text-muted text-sm font-light">点击进入查看本组全部视频作品</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="min-h-[70vh] flex items-center px-6 md:px-12 py-24">
+  <div class="max-w-2xl mx-auto">
+    <div class="line mb-8"></div>
+    <h2 class="text-3xl md:text-4xl font-light mb-10">联系</h2>
+    <p class="text-muted font-light text-lg mb-10">更多内容敬请关注。欢迎项目合作、内容沟通。</p>
+    <div class="space-y-4 text-base">
+      <a href="mailto:xxx@shturl." class="block text-slate-100 hover:text-accent transition-colors">✉️  1152636191@qq.com.</a>
+      <a href="#" class="block text-slate-100 hover:text-accent transition-colors">📞  13358191152</a>
+    </div>
+  </div>
+</section>
+
+<footer class="px-6 md:px-12 py-10 border-t border-white/5 text-muted text-xs tracking-wider">
+  <div class="max-w-5xl mx-auto flex justify-between">
+    <span>© 2026 Portfolio</span>
+    <span>Designed with restraint</span>
+  </div>
+</footer>
+</body>
+</html>
+
