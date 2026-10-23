@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI视觉｜作品集</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        base: '#0c0e16',
+        muted: '#a8a9b8',
+        accent: '#9d88e8',
+      },
+      fontFamily: {
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style type="text/tailwindcss">
+@layer utilities {
+  .bg-gradient-soft {
+    background: radial-gradient(circle at 20% 10%, rgba(157,136,232,0.12), transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(100,120,200,0.08), transparent 40%),
+                #0c0e16;
+  }
+  .text-fade {
+    background: linear-gradient(90deg, #e6e6f0, #9d88e8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .line {
+    width: 48px;
+    height: 1px;
+    background: rgba(157,136,232,0.45);
+  }
+  .card-soft {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+.dot {
+  position: fixed;
+  border-radius: 999px;
+  background: rgba(157,136,232,0.22);
+  pointer-events: none;
+}
+</style>
+</head>
+<body class="bg-base bg-gradient-soft text-slate-100 font-inter antialiased">
+<div class="dot w-1 h-1 top-[12%] left-[18%] opacity-60"></div>
+<div class="dot w-0.5 h-0.5 top-[45%] left-[75%] opacity-40"></div>
+<div class="dot w-1 h-1 top-[78%] left-[12%] opacity-30"></div>
+<div class="dot w-0.5 h-0.5 top-[22%] left-[85%] opacity-50"></div>
+<div class="dot w-1 h-1 top-[62%] left-[40%] opacity-35"></div>
+
+<div class="px-6 md:px-12 py-8">
+  <a href="index.html" class="inline-flex items-center gap-2 text-muted hover:text-accent transition-colors">
+    ← 返回首页
+  </a>
+</div>
+
+<section class="px-6 md:px-12 pb-24">
+  <div class="max-w-5xl mx-auto">
+    <div class="line mb-8"></div>
+    <h1 class="text-3xl md:text-4xl font-light mb-4">AI视觉</h1>
+    <p class="text-muted mb-16">本组合集 · AI应用</p>
+
+<div class="card-soft p-8 rounded-xl mb-8">
+  <div class="w-full aspect-video rounded-lg overflow-hidden mb-4">
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV13Rnh6bEe7&cid=42997321423&p=1"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+      class="w-full h-full block">
+    </iframe>
+  </div>
+      <h3 class="text-xl mb-2">AI</h3>
+      <p class="text-muted text-sm"></p>
+    </div>
+
+<div class="card-soft p-8 rounded-xl mb-8">
+  <div class="w-full aspect-video rounded-lg overflow-hidden mb-4">
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV13Rnh6bEJo&cid=42997321346&p=1"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+      class="w-full h-full block">
+    </iframe>
+  </div>
+      <h3 class="text-xl mb-2">AI</h3>
+      <p class="text-muted text-sm"></p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="px-6 md:px-12 py-10 border-t border-white/5 text-muted text-xs tracking-wider">
+  <div class="max-w-5xl mx-auto flex justify-between">
+    <span>© 2026 Portfolio</span>
+    <span>Designed with restraint</span>
+  </div>
+</footer>
+</body>
+</html>
+
+
